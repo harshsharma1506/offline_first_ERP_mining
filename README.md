@@ -1,4 +1,5 @@
 # Rethinking “Offline ERP” in Mining: A Case for True Offline-First Systems
+
 ## Author
 Harsh Sharma
 Independent Researcher, Mining IT Systems & ERP Integration
