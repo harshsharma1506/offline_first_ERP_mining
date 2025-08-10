@@ -21,6 +21,94 @@ What I’m proposing is different. Imagine if every tablet, scanner, or sensor c
 ### 2.1 Leaky Feeder Cables
 A leaky feeder is basically a coaxial cable with intentional gaps in its shielding so radio signals can “leak” in and out along its length. It acts like a very long antenna. Amplifiers are placed every few hundred meters to keep the signal strong. They’re reliable for voice and basic data, but not for heavy data like high-res images.
 
+<img width="457" height="480" alt="image" src="https://github.com/user-attachments/assets/2b3875b7-0825-4285-8c53-c6f59fcd53b2" />
+
+ The image shows a Basic Leaky Feeder Layout for underground mine communications. This is a commonly used system that enables radio communications in environments where normal radio signals cannot travel due to rock, depth, or interference.
+Let’s break down the components and terms used in the diagram (based on Novak, 2010):
+
+🔹 BS – Base Station
+Located at the surface, it’s the main communication hub that connects the underground network to the external world.
+
+
+Typically includes radios, servers, and routing equipment to handle data and voice.
+
+
+
+🔹 PS – Power Supply
+Provides electrical power to different parts of the leaky feeder system.
+
+
+May include battery backup in case of power failure.
+
+
+You’ll notice multiple PS units underground — these ensure the system keeps working throughout the network.
+
+
+
+🔹 Power Injection Point
+Where power is injected into the coaxial cable line to run the in-line amplifiers and other electronic components.
+
+
+Typically co-located with the Base Station.
+
+
+
+🔹 Shaft, Slope, or Borehole
+This is the vertical or inclined tunnel that connects the surface with the underground mine.
+
+
+The leaky feeder cable runs through this structure to extend communication underground.
+
+
+
+🔹 Barrier
+An intrinsically safe barrier or protection device that ensures electrical equipment used underground does not cause sparks or explosions (important for explosive atmospheres like coal mines).
+
+
+Separates safe (surface) and hazardous (mine) areas electrically.
+
+
+
+🔹 A – In-Line Amplifier
+These boost the signal strength along the leaky feeder cable to compensate for losses over distance.
+
+
+Ensures clear and continuous communication over long stretches.
+
+
+They are placed periodically (in both horizontal and vertical directions) in the system.
+
+
+
+🔹 Leaky Feeder Cable
+A coaxial cable that is specially designed to "leak" radio signals out and let them back in.
+
+
+Acts like a long antenna – enabling radios to communicate with each other underground.
+
+
+Provides radio coverage in tunnels, even where regular radios would fail.
+
+
+
+🔹 Cell
+A zone or segment in the mine that is covered by a certain portion of the leaky feeder system.
+
+
+Defined by signal coverage, amplifier spacing, and network topology.
+
+
+Each cell is essentially a communication coverage area.
+
+
+
+🔹 Inline T-Junctions
+The branching points (black squares) where feeder cables split off to cover different areas.
+
+
+Allow the system to be modular and expand into other shafts or rooms.
+
+
 ### 2.2 Mesh Networks
 In a mesh, each node can talk to its neighbors, passing data along until it reaches the destination. If one node fails, traffic takes another route. This is handy in a mine because layouts change and equipment moves. The downside is that each “hop” adds delay and cuts bandwidth, so big data transfers slow down.
 
