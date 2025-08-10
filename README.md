@@ -134,6 +134,9 @@ A Reader-Tag system typically includes:
 This data is sent to the surface control center via the leaky feeder network.
 The control software updates the miner’s current location on the map.
 
+<img width="551" height="352" alt="image" src="https://github.com/user-attachments/assets/b956c375-4782-4139-bbbc-6dd253a6cbcf" />
+
+
 ---
 
 ## 3. Why Current ERP Models Struggle
@@ -185,7 +188,7 @@ This is simple, but in a mine, simplicity is a strength — fewer moving parts m
 ### Overview
 To be useful in live mines, an offline-first layer (PouchDB on devices + CouchDB sync server) must sit *on top of*, not *instead of*, the existing data silos. The pragmatic goal is to *bridge* silos with minimum disruption: capture data reliably at the edge during outages, then transform and route it into established systems when sync is possible.
 
-**[IMAGE PLACEHOLDER: Technical Architecture Diagram]**
+****
 
 **[IMAGE PLACEHOLDER: Visual Story Diagram]**
 
