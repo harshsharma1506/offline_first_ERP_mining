@@ -2,8 +2,9 @@
 ## Author
 Harsh Sharma
 Independent Researcher, Mining IT Systems & ERP Integration
-Email: harshsharma@example.com
+
 GitHub: github.com/harshsharma1506
+
 LinkedIn: linkedin.com/in/harsh-sharma-521a30217
 
 Research Focus: Offline-first architectures, ERP-OT integration, mining communication systems, and industrial IoT resilience.
