@@ -8,9 +8,9 @@ In my work, I’ve been exploring a different angle — a *true offline-first ER
 ---
 
 ## 1. Introduction
-Anyone who’s worked with IT systems in a mining context knows that connectivity is fragile. Rock faces, dust, and equipment constantly get in the way of radio signals. Underground, miners rely on systems like leaky feeders, mesh networks, and RFID checkpoints just to keep basic communication alive.
+Anyone who’s worked with IT systems in a mining context knows that connectivity is fragile [1]. Rock faces, dust, and equipment constantly get in the way of radio signals. Underground, miners rely on systems like leaky feeders [4], mesh networks [1], and RFID checkpoints [1] just to keep basic communication alive.
 
-In ERP research, I’ve noticed that “offline” usually just means “on-premise” — meaning the server is in the mine’s own server room instead of in the cloud. This is better than needing the internet all the time, but there’s a catch: if the local LAN goes down, you can’t use the ERP at all. There’s no buffering of data, no way to capture information while disconnected.
+In ERP research, “offline” usually just means “on-premise” — meaning the server is in the mine’s own server room instead of in the cloud [2]. This is better than needing the internet all the time, but there’s a catch: if the local LAN goes down, you can’t use the ERP at all. There’s no buffering of data, no way to capture information while disconnected.
 
 What I’m proposing is different. Imagine if every tablet, scanner, or sensor could keep working without any network — storing its own data — and then, whenever it got even a brief connection, quietly sync with the central ERP. That’s the gap I think we can fill.
 
@@ -124,7 +124,7 @@ This means data collection never stops. If a miner does an equipment check deep 
 
 ---
 
-## 5. Example of Offline-First Sync Logic
+## 4.1. Example of Offline-First Sync Logic
 
 ```pseudo
 Start device application
@@ -142,6 +142,19 @@ END LOOP
 
 This is simple, but in a mine, simplicity is a strength — fewer moving parts means fewer things to break.
 
+
+---
+
+## 5. Data Silo Issues 
+
+Mining operations rarely have a single, unified data platform [3]. 
+Instead, they rely on a patchwork of systems: ERP for finance, SCADA for telemetry, safety reporting tools, geological modeling software, and ad-hoc spreadsheets.
+
+This creates "data silos" — isolated pockets of information that cannot easily be combined [3]. This leads to:
+- **Duplicate data entry**
+- **Inconsistent records**
+- **Delayed decisions**
+- **Higher maintenance costs**
 
 ---
 
