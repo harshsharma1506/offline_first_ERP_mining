@@ -112,8 +112,27 @@ Allow the system to be modular and expand into other shafts or rooms.
 ### 2.2 Mesh Networks
 In a mesh, each node can talk to its neighbors, passing data along until it reaches the destination. If one node fails, traffic takes another route. This is handy in a mine because layouts change and equipment moves. The downside is that each “hop” adds delay and cuts bandwidth, so big data transfers slow down.
 
+<img width="537" height="372" alt="image" src="https://github.com/user-attachments/assets/0cba4e4e-7ae2-45a1-97a2-63b547d71b9a" />
+
 ### 2.3 RFID Tracking
 RFID tags — passive or active — are used to track people and equipment. Passive tags get their power from the reader’s signal and work only at close range. Active tags have their own battery and can transmit further. This helps track who went where and when, but still depends on readers being placed in the right spots.
+
+A Reader-Tag system typically includes:
+
+- Tags: Small electronic devices worn by miners or attached to equipment. Each tag has a unique ID.
+- Readers: Devices installed at intervals along the leaky feeder cable or at strategic points (e.g., entries, intersections) that detect nearby tags and send data to the control center via the leaky feeder system.
+- Tracking Software: Software on the surface receives signals from the readers and determines the real-time location of personnel/equipment.
+
+🛠️ How It Works (Step-by-Step)
+- Miner wears a tag (often on their helmet or belt).
+- As they move underground, they pass by a reader installed near the leaky feeder cable.
+- The reader detects the tag’s signal and logs:
+  - Tag ID
+  - Time
+  - Reader location
+
+This data is sent to the surface control center via the leaky feeder network.
+The control software updates the miner’s current location on the map.
 
 ---
 
