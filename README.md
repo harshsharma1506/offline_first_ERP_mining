@@ -139,9 +139,9 @@ The industry’s idea of “offline ERP” needs to evolve. Device-level storage
 
 ## 9. References
 
-1. Ghosh, A., Mishra, S., & Varma, A. (Year). *Status of Communication and Tracking Technologies in Underground Mines*.
+1. Ghosh, A., Mishra, S., & Varma, A. *Status of Communication and Tracking Technologies in Underground Mines*.
 
-2. Rahman, A., et al. (Year). *Agile Data Architecture in Mining Industry for Continuous Business-IT Alignment: EA Perspective*.
+2. Rahman, A., et al. *Agile Data Architecture in Mining Industry for Continuous Business-IT Alignment: EA Perspective*.
 
 3. Ntwist Technologies. (2023). *Mine-to-Mill: Breaking Down Siloed Data in Mining Operations*. Retrieved from https://ntwist.com/blog/mine-to-mill-siloed-data
 
