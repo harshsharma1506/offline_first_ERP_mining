@@ -152,7 +152,7 @@ To be useful in live mines, an offline-first layer (PouchDB on devices + CouchDB
 
 ****
 
-**[IMAGE PLACEHOLDER: Visual Story Diagram]**
+<img width="1152" height="155" alt="image" src="https://github.com/user-attachments/assets/829eddc7-45b2-43fd-bcc0-1e146dfb17d5" />
 
 ### High-level architecture
 - **Field devices (PouchDB)**: Capture operational data offline.
