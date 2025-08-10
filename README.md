@@ -1,4 +1,4 @@
-# Offline-First SAP-like Sales Order System with PouchDB & express-pouchdb
+# Offline-First Sales Order Create System with PouchDB & express-pouchdb
 
 This project demonstrates an **offline-first** sales order management system inspired by SAP-like data entry, using:
 
