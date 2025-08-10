@@ -66,4 +66,74 @@ LOOP while device in use:
     ELSE:
         Keep collecting offline
 END LOOP
+```
+
+This is simple, but in a mine, simplicity is a strength — fewer moving parts means fewer things to break.
+
+
+---
+
+## 6. Integrating Offline-First Architecture with Existing Data Silos
+
+### Overview
+To be useful in live mines, an offline-first layer (PouchDB on devices + CouchDB sync server) must sit *on top of*, not *instead of*, the existing data silos. The pragmatic goal is to *bridge* silos with minimum disruption: capture data reliably at the edge during outages, then transform and route it into established systems when sync is possible.
+
+**[IMAGE PLACEHOLDER: Technical Architecture Diagram]**
+
+**[IMAGE PLACEHOLDER: Visual Story Diagram]**
+
+### High-level architecture
+- **Field devices (PouchDB)**: Capture operational data offline.
+- **Connectivity layer**: Any available link is used for sync.
+- **CouchDB (surface)**: Acts as sync hub.
+- **Middleware**: Transforms and routes to ERP, SCADA, Safety DB, Geology DB.
+- **Existing silos**: Receive updates without changes to their architecture.
+
+### Practical flow (equipment inspection)
+1. Inspector records check in PouchDB.
+2. Stays local if offline.
+3. Syncs when online to CouchDB.
+4. Middleware maps and pushes to ERP, maintenance DB, and safety logs.
+
+### Middleware responsibilities
+- Subscribe to CouchDB changes.
+- Validate and enrich data.
+- Map to target schema.
+- Deliver via APIs/connectors.
+- Handle conflicts and security.
+
+### Conflict resolution
+Define sources of truth per domain. Use field-level merges or manual review queues where necessary.
+
+### Data model
+Each record should include UUID, type, device_id, user_id, timestamp, source, and sync status.
+
+### Connectors
+ERP via API/DB connectors, SCADA via MQTT/OPC-UA, safety logs via SQL/JSON API, assets via object storage.
+
+### Security
+TLS, signed payloads, token-based authentication, full audit logs.
+
+### Deployment plan
+- Stage 0: Lab simulation.
+- Stage 1: Pilot in single section.
+- Stage 2: Gradual rollout.
+
+### Limitations
+- Latency not suitable for real-time control loops.
+- Middleware mapping maintenance overhead.
+- Edge storage constraints.
+
+---
+
+## 7. Benefits in the Mining Context
+- Safety data never lost.
+- No downtime during outages.
+- Better reporting without double entry.
+- Works in remote exploration sites.
+
+---
+
+## 8. Closing Thoughts
+The industry’s idea of “offline ERP” needs to evolve. Device-level storage and sync ensures operations keep running even when communications fail. The tools exist; it’s time to bring them into mining.
 
