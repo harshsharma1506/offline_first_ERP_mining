@@ -219,22 +219,71 @@ TLS, signed payloads, token-based authentication, full audit logs.
 
 ---
 
-## 8. Closing Thoughts
-The industry’s idea of “offline ERP” needs to evolve. Device-level storage and sync ensures operations keep running even when communications fail. The tools exist; it’s time to bring them into mining.
+## 8. Database Comparison: Traditional ERP vs. Offline-First
 
-## 9. References
+| Feature                         | Traditional ERP DB       | Offline-First (PouchDB + CouchDB) |
+|---------------------------------|--------------------------|------------------------------------|
+| Storage Location                | Central server           | On-device + sync to server         |
+| Network Requirement             | Always-on LAN/internet   | Only for sync events               |
+| Conflict Handling               | Locked records           | Multi-version merge resolution     |
+| Sync Method                     | Direct DB transactions   | Batch replication                  |
+| Resilience During Outages       | Stops working            | Fully functional                   |
+| Schema Flexibility              | Rigid, pre-defined       | JSON-based, flexible               |
+| Ease of Edge Deployment         | Complex setup            | Simple app install                 |
+| Suitable for Real-Time Control  | Yes                      | Limited by sync delay               |
+
+---
+
+## 9. Operational Feature Comparison: Before vs. After Offline-First
+
+| Feature/Process        | Current Operations (On-Prem)                  | With Offline-First ERP                       |
+|------------------------|-----------------------------------------------|-----------------------------------------------|
+| Data Capture           | Stops when LAN down                           | Continues regardless of connectivity         |
+| Safety Reporting       | Delayed if network unavailable                | Logs instantly, syncs later                   |
+| Equipment Tracking     | Limited to connected zones                    | Logs anywhere, updates when connected         |
+| Decision-Making        | Based on last synced server data              | Includes latest field data after sync         |
+| Integration Effort     | Manual entries in multiple systems            | Single entry, middleware distributes          |
+| Downtime Costs         | High during outages                           | Reduced significantly                         |
+| Field Productivity     | Workers idle during network issues            | Continuous work without interruption          |
+
+---
+
+## 10. Conclusion
+The industry’s definition of “offline ERP” has been too narrow — often meaning only “on-premise” [2]. In practice, on-prem ERP still halts without a live network. A true offline-first ERP — with device-level data capture, PouchDB/CouchDB sync, and middleware integration — ensures mining operations keep moving even when connectivity fails.  
+
+By addressing data silos [3], using proven underground communication systems [1][4], and leveraging offline-first tech, mines can dramatically reduce downtime, improve safety logging, and unify reporting without overhauling existing systems.
+
+---
+
+## 11. Future Work
+
+While the offline-first ERP concept addresses immediate operational challenges, further research and prototyping can strengthen its applicability in mining:
+
+### 11.1 Communication System Simulations
+Develop simulation algorithms to model:
+- **Leaky Feeder Performance**: Signal decay over distance, amplifier placement optimization, and effect of branching on coverage.
+- **Mesh Network Routing**: Node failure scenarios, latency per hop, and optimal routing algorithms for variable mine topologies.
+- **RFID Tag Detection**: Probability of read success based on tag orientation, movement speed, and interference levels.
+
+### 11.2 Data Synchronization Strategies
+Experiment with:
+- **Incremental vs. Full Sync**: Testing how partial replication can reduce bandwidth usage underground.
+- **Conflict Resolution Policies**: Applying domain-specific merge rules for safety vs. production data.
+- **Compression Before Sync**: To optimize data transfer over low-bandwidth connections.
+
+### 11.3 Middleware Optimization
+- Dynamic schema mapping between PouchDB JSON and silo-specific database schemas.
+- Automated API endpoint detection for legacy systems.
+- Event-driven data routing to reduce sync-to-reporting latency.
+
+### 11.4 Hybrid Communication Models
+Integrating leaky feeder, mesh, and short-burst high-speed fibre access points to create “connectivity bubbles” in strategic mine zones, enabling periodic high-volume syncs without full coverage.
+
+These future efforts will ensure that the offline-first ERP is not only resilient but also optimized for the unique constraints of underground mining operations.
+
+## References
 
 1. Ghosh, A., Mishra, S., & Varma, A. *Status of Communication and Tracking Technologies in Underground Mines*.
-
 2. Rahman, A., et al. *Agile Data Architecture in Mining Industry for Continuous Business-IT Alignment: EA Perspective*.
-
 3. Ntwist Technologies. (2023). *Mine-to-Mill: Breaking Down Siloed Data in Mining Operations*. Retrieved from https://ntwist.com/blog/mine-to-mill-siloed-data
-
-## 10. Documentation & Further Reading
-
-- **PouchDB Documentation** — https://pouchdb.com/
-- **CouchDB Documentation** — https://couchdb.apache.org/docs/
-- **Leaky Feeder Systems Overview** — https://www.mineconnect.com/knowledge/leaky-feeder
-- **Mesh Networking in Mining** — IEEE standards and case studies on industrial mesh deployments.
-- **RFID in Industrial Environments** — GS1 EPCglobal standards for RFID data exchange.
-- **Offline-First Design Principles** — https://offlinefirst.org/
+4. Nowak, M. (2010). *Basic Leaky Feeder Layout for Underground Mine Communications*. [Technical Document].
