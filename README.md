@@ -1,4 +1,13 @@
 # Rethinking “Offline ERP” in Mining: A Case for True Offline-First Systems
+## Author
+Harsh Sharma
+Independent Researcher, Mining IT Systems & ERP Integration
+Email: harshsharma@example.com
+GitHub: github.com/harshsharma1506
+LinkedIn: linkedin.com/in/harsh-sharma-521a30217
+
+Research Focus: Offline-first architectures, ERP-OT integration, mining communication systems, and industrial IoT resilience.
+Contribution: Concept design, architecture development, integration strategy for mining ERP, and manuscript preparation.
 
 ## Abstract
 In most mining IT literature, “offline ERP” is treated as simply hosting the ERP server on-site, disconnected from the public internet. While this avoids reliance on cloud connectivity, it still requires a functioning local network at all times. In underground mining, where communication links can fail unpredictably, this approach still causes downtime and data loss.
