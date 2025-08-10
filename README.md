@@ -137,3 +137,19 @@ TLS, signed payloads, token-based authentication, full audit logs.
 ## 8. Closing Thoughts
 The industry’s idea of “offline ERP” needs to evolve. Device-level storage and sync ensures operations keep running even when communications fail. The tools exist; it’s time to bring them into mining.
 
+## 9. References
+
+1. Ghosh, A., Mishra, S., & Varma, A. (Year). *Status of Communication and Tracking Technologies in Underground Mines*.
+
+2. Rahman, A., et al. (Year). *Agile Data Architecture in Mining Industry for Continuous Business-IT Alignment: EA Perspective*.
+
+3. Ntwist Technologies. (2023). *Mine-to-Mill: Breaking Down Siloed Data in Mining Operations*. Retrieved from https://ntwist.com/blog/mine-to-mill-siloed-data
+
+## 10. Documentation & Further Reading
+
+- **PouchDB Documentation** — https://pouchdb.com/
+- **CouchDB Documentation** — https://couchdb.apache.org/docs/
+- **Leaky Feeder Systems Overview** — https://www.mineconnect.com/knowledge/leaky-feeder
+- **Mesh Networking in Mining** — IEEE standards and case studies on industrial mesh deployments.
+- **RFID in Industrial Environments** — GS1 EPCglobal standards for RFID data exchange.
+- **Offline-First Design Principles** — https://offlinefirst.org/
