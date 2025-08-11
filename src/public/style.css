@@ -1,0 +1,42 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 20px;
+  max-width: 900px;
+}
+
+form input, form select, form button {
+  display: block;
+  margin: 8px 0;
+  padding: 8px;
+  width: 100%;
+  max-width: 300px;
+}
+
+table {
+  border-collapse: collapse;
+  width: 100%;
+  margin-top: 20px;
+}
+
+th, td {
+  border: 1px solid #ccc;
+  padding: 6px 10px;
+  text-align: left;
+}
+
+button.edit-btn {
+  background-color: #4caf50;
+  color: white;
+  border: none;
+  padding: 4px 8px;
+  margin-right: 4px;
+  cursor: pointer;
+}
+
+button.delete-btn {
+  background-color: #f44336;
+  color: white;
+  border: none;
+  padding: 4px 8px;
+  cursor: pointer;
+}
