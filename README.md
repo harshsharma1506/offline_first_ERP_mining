@@ -109,7 +109,7 @@ We had 3 orders , same can be seen in the CouchDB backend
 Now adding the new order 
 <img width="1737" height="206" alt="image" src="https://github.com/user-attachments/assets/ed83a1c1-91ca-4ec3-81d5-c53e91ad3e74" />
 
-Still offline, taking a look at the CouchDB - shows yet 
+Still offline, taking a look at the CouchDB - shows 3 yet 
 <img width="1915" height="252" alt="image" src="https://github.com/user-attachments/assets/bf09264d-5961-457f-9a58-ffeee7af3dd1" />
 
 ### Turning online 
