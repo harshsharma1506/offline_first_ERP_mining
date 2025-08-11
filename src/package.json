@@ -1,0 +1,16 @@
+{
+  "name": "offline-erp-pouchdb",
+  "version": "1.0.0",
+  "type": "module",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "dependencies": {
+    "express": "^4.19.2",
+    "express-pouchdb": "^4.2.0",
+    "pouchdb": "^8.0.1",
+    "pouchdb-adapter-leveldb": "^8.0.1",
+    "pouchdb-server": "^4.2.0"
+  }
+}
